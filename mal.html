@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>ELECTRO</title>
+    <STyle>
+        .space{
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        .box{
+            height: 40px;
+        }
+        .len{
+            max-width: 30pc;
+        }
+        .color{
+            background-color: rgb(218, 225, 225);
+            border-color: black;
+        }
+        .colstyel{
+            background-color:rgb(218, 225, 225);
+            border: 5vh;
+            box-shadow: 1px;
+            border-color: black;
+            box-sizing: border-box;
+            
+            
+        }
+       
+    </STyle>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ELECTRO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SUPPORT</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            SHOP
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Refrigerator</a></li>
+                            <li><a class="dropdown-item" href="#">Accessories</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">ABOUT US</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success color" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <form action="/result" method="POST">
+            <div class="mb-3 len">
+              <label for="exampleInputEmail1" class="form-label">Device Pressure</label>
+              <input type="number" class="form-control color" name="Dev_Prs" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+            </div>
+            <div class="mb-3 len">
+                <label for="exampleInputEmail1" class="form-label">Device Temperature</label>
+                <input type="number" class="form-control color" name="Dev_Temp" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3 len">
+                <label for="exampleInputEmail1" class="form-label">Device Capacity</label>
+                <input type="number" class="form-control color" name="Dev_Cap" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3 len">
+                <label for="exampleInputEmail1" class="form-label">Day</label>
+                <input type="number" class="form-control color" name="Day" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3 len">
+                <label for="exampleInputEmail1" class="form-label">Month</label>
+                <input type="number" class="form-control color" name="Month" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3 len">
+                <label for="exampleInputEmail1" class="form-label">Year</label>
+                <input type="number" class="form-control color" name="Year" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <select class="form-select space box len color" name="Location" aria-label="Default select example">
+                <option selected>Location</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Bhopal">Bhopal</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Indore">Indore</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Ludhiana">Ludhiana</option>
+                <option value="Lucknow">Lucknow</option>
+                <option value="Mirzapur">Mirzapur</option>
+                <option value="Panaji">Panaji</option>
+                <option value="Patna">Patna</option>
+              </select>
+            </div>
+    <div class="container">
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input space" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Looking for Service Date?</label>
+            </div>
+            <button type="submit" class="btn btn-primary space">Click Me</button>
+          </form>
+    </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col colstyel space">
+            <p>
+                ADDRESS</p>
+                <p>JP Arcade,</p>
+            <p>5th Main, Sir Prc Road, </p>
+        <p>Chamrajpet, Bangalore - 562135</p>
+            </div>
+            <div class="col colstyel border space">
+                <p>
+                    ELECTRO India Ltd, is a subsidiary of Electro Corporation, committed to being the best global kitchen and laundry company, in constant pursuit of improving life at home. Headquartered in Gurugram, we are one of the largest manufacturers and marketers of major home appliances in the country.
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
